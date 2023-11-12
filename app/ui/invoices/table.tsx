@@ -7,9 +7,11 @@ import { fetchFilteredInvoices } from '@/app/lib/data';
 export default async function InvoicesTable({
   query,
   currentPage,
+
 }: {
   query: string;
   currentPage: number;
+
 }) {
   const invoices = await fetchFilteredInvoices(query, currentPage);
 
@@ -106,6 +108,7 @@ export default async function InvoicesTable({
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                     <InvoiceStatus status={invoice.status} />
+
                   </td>
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex justify-end gap-3">
